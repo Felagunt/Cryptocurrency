@@ -4,7 +4,7 @@ package com.plcoding.cryptocurrencyappyt.data.remote.dto
 import com.google.gson.annotations.SerializedName
 import com.plcoding.cryptocurrencyappyt.domain.model.CoinDetail
 
-data class CoinDatailsDto(
+data class CoinDatailDto(
     val description: String,
     @SerializedName("development_status")
     val developmentStatus: String,
@@ -43,7 +43,7 @@ data class CoinDatailsDto(
     val whitepaper: Whitepaper
 )
 
-fun CoinDatailsDto.toCoinDetail(): CoinDetail {
+fun CoinDatailDto.toCoinDetail(): CoinDetail {
     return CoinDetail(
         coinId = id,
         name = name,
